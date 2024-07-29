@@ -300,3 +300,68 @@ switch (day) {
 let age = 20;
 let canVote = age >= 18 ? "yes" : "no";
 ```
+
+## Looping and Iteration:
+
+Looping and iterations in JavaScript are techniques that allow you to execute a block of code repeatedly. They are used to perform repetitive tasks, traverse data structures like arrays and objects, and handle various scenarios in your code. They allow you to iterate through arrays, perform actions on each element, and control the flow of your code dynamically.
+
+1. for loop - It consists of three parts, initialization, condition, and update.
+
+Initialization, this part is where you initialize a loop control variable, typically with an initial value.
+
+Condition, this is a Boolean expression that is evaluated before each iteration. If the condition is true, the loop continues, otherwise it terminates.
+
+Update, this part is responsible for changing the loop control variable in each iteration, often incrementing or decrementing its value
+
+```js
+// statement
+for (initialization; condition; update) {
+  // code to be executed
+}
+```
+
+```js
+for (let i = 1; i <= 5; i++) {
+  console.log(i);
+}
+```
+
+2. while loop - it continually evaluates the condition before each iteration.
+
+```js
+// statement
+while (condition) {
+  // code to be executed
+}
+```
+
+```js
+let i = 1;
+
+while (i <= 5) {
+  console.log(i);
+  i++;
+}
+```
+
+3. do while loop - Unlike the for or while loops, a do while loop guarantees that the code block will execute at least once, even if the condition is initially false.
+
+The structure of a do while loop is as follows. The code block is executed first, then the condition is checked. If the condition is true, the loop continues and the code block is executed again. If the condition is false, the loop terminates.
+
+```js
+// statement
+do {
+  // code to be executed
+} while (condition);
+```
+
+```js
+let i = 1;
+
+do {
+  console.log(i);
+  i++;
+} while (i <= 5);
+```
+
+##
