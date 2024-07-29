@@ -145,3 +145,71 @@ const person = {
   age: 30,
 };
 ```
+
+## Operators:
+
+1. Arithmetic operators:
+
+Arithmetic operators are used for basic mathematical calculations. Common arithmetic operators include: addition, subtraction, multiplication, division, and modulus.
+
+```js
+let × = 15;
+let y = 3;
+let sum = x + y; // Addition
+console.log(sum); //The answer is 18
+let difference = x - y; // Subtraction
+console.log(difference); //The answer is 12
+let product = × * y; // Multiplication
+console.log(product); //The answer is 45
+let quotient = × / y; // Division
+console.log(quotient); //The answer is 5
+let remainder = × % y; // Modulus
+console.log(remainder); //The remainder is O
+```
+
+2. Comparison operators:
+
+Comparison operators are used to compare two values or variables and return a Boolean true or false result. Common comparison operators include: equality, inequality, strict equality, strict inequality, less than, greater than, less than or equal to, and greater than or equal to.
+
+```js
+let a = 5;
+let b = 7;
+let isEqual = a == b; // Equality
+let isNotEqual = a != b; // Inequality
+let isStrictEqual = a === b; // Strict equality
+let isStrictNotEqual = a !== b; // Strict equality
+let isGreaterThan = a > b; // Greater than
+let isLessThan = a < b; // Greater than
+let isGreaterOrEqual = a >= b; // Greater than
+let isLessOrEqual = a <= b; // Greater than
+```
+
+3. Logical operators:
+
+Logical operators are used to combine or manipulate Boolean values. Common logical operators include logical AND, logical OR, and logical NOT.
+
+```js
+let hasPermission = true;
+let isMember = false;
+let canAccessResource = hasPermission && isMember; // Logical AND
+let canViewPage = hasPermission || isMember; // Logical OR
+let isDenied = !hasPermission; // Logical NOT
+```
+
+4. Assignment operators:
+
+Assignment operators are used to assign values to variables. The most basic assignment operator is the equal sign.
+
+```js
+let x = 10; // Assign the value 10 to the variable x
+```
+
+5. Unary operators:
+
+Unary operators operate on a single value or variable. Common unary operators include increment and decrement.
+
+```js
+let count = 5;
+count++;
+count--;
+```
