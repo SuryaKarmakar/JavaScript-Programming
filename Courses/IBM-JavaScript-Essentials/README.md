@@ -213,3 +213,90 @@ let count = 5;
 count++;
 count--;
 ```
+
+## Control flow and Conditional statements:
+
+Control flow and conditional statements are fundamental in directing the flow of a JavaScript program. Control flow refers to the order in which statements are executed in a JavaScript program. While conditional statements, often referred to as decision making statements, are used to manage this flow based on specified conditions. Some of the conditional statements in JavaScript are if statement, else if statement, else statement, nested if else statement, switch statement, and ternary operator.
+
+1. if statement - the if statement is used to execute a block of code if a specified condition is true, if the condition is false, the code block is skipped.
+
+```js
+let age = 25;
+
+if (age >= 18) {
+  console.log("You are an adult.");
+} else {
+  console.log("You are a minor.");
+}
+```
+
+2. else statement - the else statement is used to specify a block of code to be executed if the condition in the if statement is false.
+
+```js
+let age = 10;
+
+if (age >= 18) {
+  console.log("You are an adult.");
+} else {
+  console.log("You are a minor.");
+}
+```
+
+3. else if - else if statement allows you to test multiple conditions sequentially, especially when you have more than two possible outcomes.
+
+```js
+let time = 12;
+
+if (time < 12) {
+  console.log("Good Morning");
+} else if (time < 18) {
+  console.log("Good Afternoon");
+} else {
+  console.log("Good Evening");
+}
+```
+
+4. Nested if else statements - Nested if else statements are a common programming construct in JavaScript and many other programming languages. They allow you to test multiple conditions and execute different blocks of code based on the results of those conditions.
+
+```js
+const temperature = 30;
+const isRaining = true;
+
+if (temperature > 30) {
+  if (isRaining) {
+    console.log("It's hot and raining. Stay inside.");
+  } else {
+    console.log("It's hot, but not raining. Enjoy the sunshine.");
+  }
+} else {
+  if (isRaining) {
+    console.log("It's not so hot, but it's raining. Take an umbrella.");
+  } else {
+    console.log("It's not hot, and it's not raining. Have a nice day.");
+  }
+}
+```
+
+5. Switch statement - switch statement allows you to compare a value against multiple possible case values and execute code based on the first matching case.
+
+```js
+let day = "Monday";
+
+switch (day) {
+  case "Monday":
+    console.log("It's the start of the workweek.");
+    break;
+  case "Friday":
+    console.log("It's almost the weekend!");
+    break;
+  default:
+    console.log("It's a regular day.");
+}
+```
+
+6. Ternary operator - ternary operator is a concise way to write conditional statements such as if else condition.
+
+```js
+let age = 20;
+let canVote = age >= 18 ? "yes" : "no";
+```
