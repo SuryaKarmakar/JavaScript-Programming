@@ -364,4 +364,122 @@ do {
 } while (i <= 5);
 ```
 
-##
+## Functions:
+
+Functions are a fundamental part of the language and are used to encapsulate and organize code into manageable, reusable units. functions help improve code structure, readability, and maintainability.
+
+You can declare a function using the function keyword followed by a name, enclosed parentheses, and the functions code enclosed in curly braces. When you call a function, it executes the code within its block.
+
+```js
+function sayHello() {
+  console.log("hello");
+}
+
+sayHello();
+```
+
+- Non-parameterized functions:
+
+Non-parameterized functions do not require any parameters to operate. They can perform their tasks without receiving any specific input values. Non-parameterized functions are often used for tasks that rely solely on their internal logic or external factors.
+
+```js
+function add() {
+  let a = 10;
+  let b = 20;
+  return a + b;
+}
+```
+
+- Parameterized functions:
+
+Parameterized functions except one or more parameters, also called arguments that provide input data for the function to work with. You define these parameters in the function's declaration, and when you call the function, you pass specific values for those parameters.
+
+Parameterized functions are versatile because they can adapt to different input values, making them more flexible.
+
+```js
+function add(a, b) {
+  return a + b;
+}
+
+add(4, 7);
+```
+
+- Parameters and Arguments:
+
+Parameters are variables you define in the function declaration to accept input values. Arguments are the actual values you pass to a function when calling it.
+
+```js
+function add(a, b) {
+  // a and b are Parameters
+  return a + b;
+}
+
+// 4 and 7 are Arguments
+add(4, 7);
+```
+
+- Writing a function in JavaScript:
+
+There are two ways of writing a function in JavaScript, function declaration, function expression.
+
+1. Function declaration:
+
+Function declaration is the traditional way to define a function. It is similar to how we define a function in other programming languages. We start by declaring it using the keyword function, then we write the function name and the parameters.
+
+```js
+function add(a, b) {
+  return a + b;
+}
+```
+
+2. Function expression;
+
+Here we define a function using a variable and store the returned value in that variable.
+
+```js
+const add = function (a, b) {
+  console.log(a + b);
+};
+
+add(2, 3);
+```
+
+- Types of functions:
+
+1. Named function:
+
+Named functions have specific names that can be called by their names. They are typically declared using the function keyword. In the given example, the name of the function is add.
+
+```js
+const add = function (a, b) {
+  console.log(a + b);
+};
+
+add(2, 3);
+```
+
+2. Immediately invoked function expression(IIFE):
+
+IIFE is a function in JavaScript that's defined and executed immediately after its creation. It's often employed to encapsulate variables and code within a private scope, helping to prevent global scope contamination and variable conflicts.
+
+```js
+(function sayHello() {
+  console.log("hello");
+})();
+```
+
+3. Arrow function:
+
+The arrow function is a more concise way to write functions introduced in ES6. They are often used for short, simple functions.
+
+```js
+const add = (a, b) => a + b;
+```
+
+4. Anonymous function:
+
+Anonymous functions are without a name. These are often used as arguments for other functions or assigned to variables. For example, you can create anonymous functions using the arrow function
+
+```js
+const add = (a, b) => a + b; // => a + b this part is called Anonymous function
+```
