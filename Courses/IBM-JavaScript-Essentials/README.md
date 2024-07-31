@@ -6,7 +6,9 @@
 
 ## How to use JS:
 
-1. In-line JavaScript: you can include JavaScript code directly in your HTML file using the script tag within the body.
+- In-line JavaScript:
+
+You can include JavaScript code directly in your HTML file using the script tag within the body.
 
 ```html
 <h1>
@@ -16,10 +18,11 @@
 </h1>
 ```
 
-1. External JavaScript file: it's recommended to put your JavaScript code in a separate JS file and link it to your HTML file using
-   the script tag with a SRC attribute.
+- External JavaScript file:
 
-Step 1, create a separate JS file,e.g. script.js
+It's recommended to put your JavaScript code in a separate JS file and link it to your HTML file using the script tag with a SRC attribute.
+
+Step 1, create a separate JS file, e.g. script.js
 
 ```js
 function hello() {
@@ -35,17 +38,19 @@ Step 2, in your HTML file include a script tag with the SRC attribute pointing t
 
 ## Data types and Variables:
 
-Variables act as containers for various types of information or values. You can think of a variable as a named storage location that holds data, and you can use this data in your JavaScript code.
+Variables act as containers for various types of information or values. You can think of a variable as a named storage location that holds data, and you can use this data in your JavaScript code. variable names must start with a letter, underscore, or dollar sign, and can contain letters, numbers, underscores, and dollar signs.
 
-Variable names must start with a letter, underscore, or dollar sign, and can contain letters, numbers, underscores, and dollar signs.
+- Initialization of a variable:
+
+You can optionally assign an initial value to it. To create a variable in JavaScript, you also need to declare it using one of three keywords, var, let, or const.
 
 ```js
 name = "John";
 ```
 
-Initialization of a variable, you can optionally assign an initial value to it.
+1. Var:
 
-To create a variable in JavaScript, you also need to declare it using one of three keywords, var, let, or const.
+Var was the original way to declare variables in JavaScript, and it has function level scope. This means that a variable declared with var is available throughout the entire function in which it is declared.
 
 ```js
 function example() {
@@ -56,7 +61,9 @@ function example() {
 }
 ```
 
-Var was the original way to declare variables in JavaScript, and it has function level scope. This means that a variable declared with var is available throughout the entire function in which it is declared.
+2. Let:
+
+Let was introduced in ES6 and provides block level scoping. This means, that a variable declared with let is only available within the block enclosed by curly braces in which it is defined.
 
 ```js
 function example() {
@@ -67,7 +74,7 @@ function example() {
 }
 ```
 
-Let was introduced in ES6 and provides block level scoping. This means, that a variable declared with let is only available within the block enclosed by curly braces in which it is defined.
+Variables declared with let can be reassigned, but not redeclared within the same block.
 
 ```js
 {
@@ -81,45 +88,55 @@ Let was introduced in ES6 and provides block level scoping. This means, that a v
 }
 ```
 
-Variables declared with let can be reassigned, but not redeclared within the same block.
+3. Const:
+
+Const is also introduced in ES6 and is used to declare variables with constant values. Once you assign a value to a const variable, you cannot reassign it a different value. It also has block level scoping. Variables declared with const are constant and can neither be reassigned nor redeclared within the same block.
 
 ```js
 const pi = 3.14;
 console.log(pix);
 ```
 
-Const is also introduced in ES6 and is used to declare variables with constant values. Once you assign a value to a const variable, you cannot reassign it a different value. It also has block level scoping. Variables declared with const are constant and can neither be reassigned nor redeclared within the same block.
-
 - Data types:
 
 JavaScript is a dynamically typed language, which means that you don't need to explicitly specify the data type of a variable when you declare it. The data type is determined dynamically at runtime based on the value you assign to the variable.
 
-1. Primiive data types
+1. Primiive data types:
 
-a. Strings - represents text. A string is enclosed in single or double quotes.
+- Strings:
+
+Strings represents text. A string is enclosed in single or double quotes.
 
 ```js
 let name = "John";
 ```
 
-b. Number - represents both integers and floating-point numbers
+- Number:
+
+Number represents both integers and floating-point numbers
 
 ```js
 let age = 30;
 let price = 9.99;
 ```
 
-c. Boolean - represents true or false values.
+- Boolean:
+
+Boolean represents true or false values.
 
 ```js
 let isStudent = true;
 ```
 
-d. Undefined - represents a variable that has been declared, but hasn't been assigned a value.
+- Undefined:
+
+Undefined represents a variable that has been declared, but hasn't been assigned a value.
 
 ```js
 let x;
 ```
+
+- Null:
 
 Null represents an empty value or absence of any object value.
 
@@ -127,17 +144,21 @@ Null represents an empty value or absence of any object value.
 let emptyValue = null;
 ```
 
-2. Composite data types
+2. Composite data types:
 
-Composite data types are those that can hold and manage multiple values as a single unit. These data types are used to organize and manipulate collections of data, making it easier to work with more complex structures.
+Composite data types are those that can hold and manage multiple values as a single unit. These data types are used to organize and manipulate collections of data, making it easier to work with more complex structures. Array and object are two composite data types.
 
-a. Array - and object are two composite data types. An array in JavaScript is a list like data structure for storing multiple value.
+- Array:
+
+An array in JavaScript is a list like data structure for storing multiple value.
 
 ```js
 const array = [1, 2, 3, 4, 5];
 ```
 
-b. object is a collection of key value pairs used for structured data storage.
+- Object:
+
+Object is a collection of key value pairs used for structured data storage.
 
 ```js
 const person = {
@@ -218,7 +239,9 @@ count--;
 
 Control flow and conditional statements are fundamental in directing the flow of a JavaScript program. Control flow refers to the order in which statements are executed in a JavaScript program. While conditional statements, often referred to as decision making statements, are used to manage this flow based on specified conditions. Some of the conditional statements in JavaScript are if statement, else if statement, else statement, nested if else statement, switch statement, and ternary operator.
 
-1. if statement - the if statement is used to execute a block of code if a specified condition is true, if the condition is false, the code block is skipped.
+1. If statement:
+
+The if statement is used to execute a block of code if a specified condition is true, if the condition is false, the code block is skipped.
 
 ```js
 let age = 25;
@@ -230,7 +253,9 @@ if (age >= 18) {
 }
 ```
 
-2. else statement - the else statement is used to specify a block of code to be executed if the condition in the if statement is false.
+2. Else statement:
+
+The else statement is used to specify a block of code to be executed if the condition in the if statement is false.
 
 ```js
 let age = 10;
@@ -242,7 +267,9 @@ if (age >= 18) {
 }
 ```
 
-3. else if - else if statement allows you to test multiple conditions sequentially, especially when you have more than two possible outcomes.
+3. Else if statement:
+
+The else if statement allows you to test multiple conditions sequentially, especially when you have more than two possible outcomes.
 
 ```js
 let time = 12;
@@ -256,7 +283,9 @@ if (time < 12) {
 }
 ```
 
-4. Nested if else statements - Nested if else statements are a common programming construct in JavaScript and many other programming languages. They allow you to test multiple conditions and execute different blocks of code based on the results of those conditions.
+4. Nested if else statements:
+
+Nested if else statements are a common programming construct in JavaScript and many other programming languages. They allow you to test multiple conditions and execute different blocks of code based on the results of those conditions.
 
 ```js
 const temperature = 30;
@@ -277,7 +306,9 @@ if (temperature > 30) {
 }
 ```
 
-5. Switch statement - switch statement allows you to compare a value against multiple possible case values and execute code based on the first matching case.
+5. Switch statement:
+
+Switch statement allows you to compare a value against multiple possible case values and execute code based on the first matching case.
 
 ```js
 let day = "Monday";
@@ -294,7 +325,9 @@ switch (day) {
 }
 ```
 
-6. Ternary operator - ternary operator is a concise way to write conditional statements such as if else condition.
+6. Ternary operator:
+
+Ternary operator is a concise way to write conditional statements such as if else condition.
 
 ```js
 let age = 20;
@@ -305,13 +338,21 @@ let canVote = age >= 18 ? "yes" : "no";
 
 Looping and iterations in JavaScript are techniques that allow you to execute a block of code repeatedly. They are used to perform repetitive tasks, traverse data structures like arrays and objects, and handle various scenarios in your code. They allow you to iterate through arrays, perform actions on each element, and control the flow of your code dynamically.
 
-1. for loop - It consists of three parts, initialization, condition, and update.
+1. For loop:
 
-Initialization, this part is where you initialize a loop control variable, typically with an initial value.
+It consists of three parts, initialization, condition, and update.
 
-Condition, this is a Boolean expression that is evaluated before each iteration. If the condition is true, the loop continues, otherwise it terminates.
+- Initialization:
 
-Update, this part is responsible for changing the loop control variable in each iteration, often incrementing or decrementing its value
+This part is where you initialize a loop control variable, typically with an initial value.
+
+- Condition:
+
+This is a Boolean expression that is evaluated before each iteration. If the condition is true, the loop continues, otherwise it terminates.
+
+- Update:
+
+This part is responsible for changing the loop control variable in each iteration, often incrementing or decrementing its value
 
 ```js
 // statement
@@ -326,7 +367,9 @@ for (let i = 1; i <= 5; i++) {
 }
 ```
 
-2. while loop - it continually evaluates the condition before each iteration.
+2. While loop:
+
+It continually evaluates the condition before each iteration.
 
 ```js
 // statement
@@ -344,9 +387,9 @@ while (i <= 5) {
 }
 ```
 
-3. do while loop - Unlike the for or while loops, a do while loop guarantees that the code block will execute at least once, even if the condition is initially false.
+3. Do while loop:
 
-The structure of a do while loop is as follows. The code block is executed first, then the condition is checked. If the condition is true, the loop continues and the code block is executed again. If the condition is false, the loop terminates.
+Unlike the for or while loops, a do while loop guarantees that the code block will execute at least once, even if the condition is initially false. The structure of a do while loop is as follows. The code block is executed first, then the condition is checked. If the condition is true, the loop continues and the code block is executed again. If the condition is false, the loop terminates.
 
 ```js
 // statement
@@ -366,9 +409,7 @@ do {
 
 ## Functions:
 
-Functions are a fundamental part of the language and are used to encapsulate and organize code into manageable, reusable units. functions help improve code structure, readability, and maintainability.
-
-You can declare a function using the function keyword followed by a name, enclosed parentheses, and the functions code enclosed in curly braces. When you call a function, it executes the code within its block.
+Functions are a fundamental part of the language and are used to encapsulate and organize code into manageable, reusable units. functions help improve code structure, readability, and maintainability. You can declare a function using the function keyword followed by a name, enclosed parentheses, and the functions code enclosed in curly braces. When you call a function, it executes the code within its block.
 
 ```js
 function sayHello() {
@@ -378,7 +419,7 @@ function sayHello() {
 sayHello();
 ```
 
-- Non-parameterized functions:
+1. Non-parameterized functions:
 
 Non-parameterized functions do not require any parameters to operate. They can perform their tasks without receiving any specific input values. Non-parameterized functions are often used for tasks that rely solely on their internal logic or external factors.
 
@@ -390,7 +431,7 @@ function add() {
 }
 ```
 
-- Parameterized functions:
+2. Parameterized functions:
 
 Parameterized functions except one or more parameters, also called arguments that provide input data for the function to work with. You define these parameters in the function's declaration, and when you call the function, you pass specific values for those parameters.
 
