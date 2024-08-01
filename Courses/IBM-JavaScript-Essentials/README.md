@@ -517,6 +517,9 @@ The arrow function is a more concise way to write functions introduced in ES6. T
 const add = (a, b) => a + b;
 ```
 
+Arrow functions have a more compact and readable syntax. They use a fat arrow to define the function, which is why they're commonly
+referred to as arrow functions. Arrow functions do not require the function keyword. This makes the code cleaner and easier to write. Arrow functions can also be categorized in two ways, parameterized and non parameterized functions.
+
 4. Anonymous function:
 
 Anonymous functions are without a name. These are often used as arguments for other functions or assigned to variables. For example, you can create anonymous functions using the arrow function
@@ -524,3 +527,70 @@ Anonymous functions are without a name. These are often used as arguments for ot
 ```js
 const add = (a, b) => a + b; // => a + b this part is called Anonymous function
 ```
+
+- Return statement:
+
+In JavaScript functions, the return statement is used to value that a function should produce as its result when it's called. It's essential for controlling the output of functions and is crucial for making functions reusable and versatile.
+
+The return statement is used to produce an output value from a function. This output can be a specific data value, a calculated result, or even another function. It serves as an exit point for a function. Once a return statement is encountered, the function terminates and the control flow is handed back to the code that called the function.
+
+A return statement typically appears inside the function body and specifies the value that the function should return. When the function is called, it executes its code and evaluates the return statement. The function then immediately exits and the specified value is returned to the code that called the function. You can capture the returned value by assigning the function call to a variable or using it directly in other expressions.
+
+```js
+function add(a, b) {
+  return a + b;
+}
+
+const result = add(4, 7); // the value 11 is returned from the function and assigned to result
+
+console.log(result);
+```
+
+- Function Closure:
+
+A function closure is a function that retains access to variables from its enclosing function scope. Even after the enclosing function has finished executing, closures allow you to create private variables, implement data hiding, and maintain state between function calls.
+
+Closures allow you to encapsulate data within a function scope. Creating a private environment for variables. This is crucial for building modular and maintainable code. As it helps prevent unintended interference or modification of variables from outside the function. By using closures, you can hide certain data and expose only the necessary parts of your code's functionality. This is fundamental for creating clean and secure application programming interface, or API's libraries and modules.
+
+Closures enable functions to remember and maintain state between function calls. This is valuable for tasks like implementing counters, timers, or managing application state in event driven programming.
+
+In this example, the greet function takes a name parameter, and returns an inner function, sayHello. you can create multiple greetings by calling greet with different names, and each greeting retains its specific name. When you invoke greetJohn and greetAlice, they still remember their respective name values.
+
+```js
+function greet(name) {
+  const greeting = "Hello. ";
+
+  function sayHello() {
+    console.log(greeting + name);
+  }
+
+  return sayHello;
+}
+
+const greetJohn = greet("John");
+const greetAlice = greet("Alice");
+
+greetJohn();
+greetAlice();
+```
+
+- Function Hoisting:
+
+Function hoisting, is a behavior in Javascript where function declarations are moved to the top of their containing scope during the compilation phase, allowing you to use a function before it's actually declared in the code. This behavior only applies to function declarations, not function expressions.
+
+```js
+sayHello(); // this works even though the function is called before its declared
+
+// it works because function declarations are hoisted to the top of their containing scope during the compilation phase.
+function sayHello() {
+  console.log(greeting + name);
+}
+```
+
+Function hoisting can make code more readable and self explanatory, by allowing you to use functions before they are defined in the code. This can improve the logical flow of your code, and make it easier to understand.
+
+Hoisted functions can be defined at any point within their containing scope, regardless of the order in which they are called. This flexibility can be helpful when structuring your code and organizing related functions.
+
+Function hoisting is crucial for recursive functions, as it allows the function to call itself within its own definition. You can conditionally execute functions based on certain criteria without having to define them in a specific order.
+
+## Events:
