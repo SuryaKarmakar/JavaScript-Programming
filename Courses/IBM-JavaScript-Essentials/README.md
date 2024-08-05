@@ -681,4 +681,52 @@ The event handler for the change event is attached to the input field using the 
 </body>
 ```
 
-##
+## Array:
+
+In JavaScript, an array is a data structure used to store and organize a collection of values. These values can be of various data types,
+such as numbers, strings, objects, or even other arrays.
+
+Arrays in JavaScript are ordered, which means that the elements are stored in a specific sequence, and each element is accessible by its index or position in the array. It's important to note that arrays in JavaScript are zero-indexed, meaning the first element is at index 0, the second element is at index 1, and so on. You can access and manipulate individual elements within an array using their indices.
+
+Creating an array in JavaScript is straightforward. You can use square brackets to declare an array and store elements within it separated by commas.
+
+```js
+const fruits = ["apple", "banana", "cherry"];
+
+// Arrays are zero-indexed, so you can access elements using their index
+const firstFruit = fruits[0]; // apple
+const secondFruit = fruits[1]; // banana
+```
+
+Arrays in JavaScript are mutable. This means that you can change, add, or remove elements after creating the array.
+
+```js
+const fruits = ["apple", "banana", "cherry"];
+
+// it changes cherry to strawberry.
+fruits[2] = "strawberry"; // Modifying an elment
+```
+
+JavaScript provides a variety of built-in methods to perform operations on arrays, including push, pop, shift, unshift, splice, slice,
+concat, map, filter, and many more. These methods offer powerful ways to manipulate and work with arrays.
+
+```js
+const fruits = ["apple", "banana", "cherry"];
+
+// push adds the element orange to the end of the fruits array.
+fruits.push("orange");
+
+// pop removes the last element from the fruits array.
+fruits.pop();
+```
+
+Arrays can also contain other arrays, allowing you to create multidimensional arrays or complex data structures.
+
+```js
+// 2d array
+const matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+```
