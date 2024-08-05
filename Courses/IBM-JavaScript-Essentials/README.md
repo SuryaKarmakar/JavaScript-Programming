@@ -594,3 +594,139 @@ Hoisted functions can be defined at any point within their containing scope, reg
 Function hoisting is crucial for recursive functions, as it allows the function to call itself within its own definition. You can conditionally execute functions based on certain criteria without having to define them in a specific order.
 
 ## Events:
+
+In Javascript, events are crucial for creating interactive and dynamic web applications, these are actions or occurrences in the browser, such as user interactions, page loading, or mouse movements over elements. Some of the common events in Javascript are click, mouseover, keydown, and change.
+
+- Click event:
+
+The click event is triggered when a user clicks an element like a button.
+
+The Javascript code at the end of the document first retrieves references to these elements using document.getElementById and stores them in the button and output variables.
+
+Next, attach an event handler to the button element using the onclick property. The event handler, an anonymous function, specifies
+what should happen when clicking the button.
+
+```html
+<body>
+  <button id="myBtn">Click Me</button>
+
+  <script>
+    const button = document.getElementById("myBtn");
+
+    button.onclick = function () {
+      console.log("onclick");
+    };
+  </script>
+</body>
+```
+
+- Mouseover event:
+
+The mouseover event is triggered when the mouse cursor enters an element.
+
+You can then attach an event handler to the div element using the onmouseover property.
+
+```html
+<body>
+  <div id="myDiv">Click Me</div>
+
+  <script>
+    const div = document.getElementById("myDiv");
+
+    div.onmouseover = function () {
+      console.log("onmouseover");
+    };
+  </script>
+</body>
+```
+
+- Keydown event:
+
+The keydown event is triggered when you press down a key on the keyboard. This example demonstrates handling the keydown event by
+displaying the pressed key when typing in an input field. An event handler for the keydown event is attached to the input field using the onkeydown property. This event handler is defined to accept an event parameter which contains information about the key that was pressed.
+
+This event handler is defined to accept an event parameter which contains information about the key that was pressed.
+
+```html
+<body>
+  <input type="text" id="myInput" />
+
+  <script>
+    const input = document.getElementById("myInput");
+
+    input.onkeydown = function (event) {
+      console.log(event.key);
+    };
+  </script>
+</body>
+```
+
+- Change event:
+
+The change event is triggered when the value of an input element changes. Typically, you can use it to form elements like text fields or drop-downs.
+
+The event handler for the change event is attached to the input field using the onchange property. When the input value changes, the event handler triggers and updates the paragraphs content with value changed to followed by the new value of the input.
+
+```html
+<body>
+  <input type="text" id="myInput" />
+
+  <script>
+    const input = document.getElementById("myInput");
+
+    input.onchange = function () {
+      console.log(input.value);
+    };
+  </script>
+</body>
+```
+
+## Array:
+
+In JavaScript, an array is a data structure used to store and organize a collection of values. These values can be of various data types,
+such as numbers, strings, objects, or even other arrays.
+
+Arrays in JavaScript are ordered, which means that the elements are stored in a specific sequence, and each element is accessible by its index or position in the array. It's important to note that arrays in JavaScript are zero-indexed, meaning the first element is at index 0, the second element is at index 1, and so on. You can access and manipulate individual elements within an array using their indices.
+
+Creating an array in JavaScript is straightforward. You can use square brackets to declare an array and store elements within it separated by commas.
+
+```js
+const fruits = ["apple", "banana", "cherry"];
+
+// Arrays are zero-indexed, so you can access elements using their index
+const firstFruit = fruits[0]; // apple
+const secondFruit = fruits[1]; // banana
+```
+
+Arrays in JavaScript are mutable. This means that you can change, add, or remove elements after creating the array.
+
+```js
+const fruits = ["apple", "banana", "cherry"];
+
+// it changes cherry to strawberry.
+fruits[2] = "strawberry"; // Modifying an elment
+```
+
+JavaScript provides a variety of built-in methods to perform operations on arrays, including push, pop, shift, unshift, splice, slice,
+concat, map, filter, and many more. These methods offer powerful ways to manipulate and work with arrays.
+
+```js
+const fruits = ["apple", "banana", "cherry"];
+
+// push adds the element orange to the end of the fruits array.
+fruits.push("orange");
+
+// pop removes the last element from the fruits array.
+fruits.pop();
+```
+
+Arrays can also contain other arrays, allowing you to create multidimensional arrays or complex data structures.
+
+```js
+// 2d array
+const matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+```
