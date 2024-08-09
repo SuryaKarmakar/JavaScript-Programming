@@ -707,19 +707,6 @@ const fruits = ["apple", "banana", "cherry"];
 fruits[2] = "strawberry"; // Modifying an elment
 ```
 
-JavaScript provides a variety of built-in methods to perform operations on arrays, including push, pop, shift, unshift, splice, slice,
-concat, map, filter, and many more. These methods offer powerful ways to manipulate and work with arrays.
-
-```js
-const fruits = ["apple", "banana", "cherry"];
-
-// push adds the element orange to the end of the fruits array.
-fruits.push("orange");
-
-// pop removes the last element from the fruits array.
-fruits.pop();
-```
-
 Arrays can also contain other arrays, allowing you to create multidimensional arrays or complex data structures.
 
 ```js
@@ -729,4 +716,60 @@ const matrix = [
   [4, 5, 6],
   [7, 8, 9],
 ];
+```
+
+- Manipulating and Iterating Arrays:
+
+Arrays are fundamental data structures in JavaScript, and they often require manipulation and iteration to work with data effectively. JavaScript provides a wide range of built-in array methods that allow you to perform various operations on arrays without writing custom code.
+
+1. Push method:
+
+The push method adds one or more elements to an array's ends and returns the array's new link.
+
+```js
+const fruits = ["apple", "banana"];
+
+fruits.push("orange");
+
+console.log(fruits); // ["apple", "banana", "orange"]
+```
+
+2. Pop method:
+
+The pop method removes the last element from an array and returns that element.
+
+```js
+const fruits = ["apple", "banana", "orange"];
+
+// this variable stores the removed last element
+const removedItem = fruits.pop();
+
+console.log(removedItem); // orange
+console.log(fruits); // ["apple", "banana"]
+```
+
+3. Shift method:
+
+The shift method removes the first element from an array and returns that element.
+
+```js
+const fruits = ["apple", "banana", "orange"];
+
+// this variable stores the removed first element
+const removedItem = fruits.shift();
+
+console.log(removedItem); // apple
+console.log(fruits); // ["banana", "orange"]
+```
+
+4. Unshift method:
+
+The unshift method adds one or more elements to an array's beginning, and returns the array's new link.
+
+```js
+const fruits = ["apple", "banana"];
+
+fruits.unshift("orange", "strawberry");
+
+console.log(fruits); // ["orange", "strawberry", "apple", "banana"]
 ```
