@@ -892,3 +892,72 @@ fruits.length = 2; // truncating the array
 
 console.log(fruits); // ["apple", "banana"]
 ```
+
+12. ForEach method:
+
+The forEach method iterates through an array, and applies a provided function to each element.
+It's commonly used when you want to perform a specific action for each element, without creating a new array.
+
+```js
+const users = [
+  { name: "Alice", email: "alice@example.com" },
+  { name: "Bob", email: "bob@example.com" },
+  { name: "Charlie", email: "charlie@example.com" },
+];
+
+// this arrow function that takes the current user object as a parameter.
+users.forEach((user) => {
+  console.log(user.email);
+});
+```
+
+13. Map method:
+
+The map method creates a new array by applying a provided function to each element in the original array. It's perfect for transforming data without modifying the original array.
+
+The map method iterates through the array, and executes the provided arrow function for each element.
+
+```js
+const users = [
+  { name: "Alice", email: "alice@example.com" },
+  { name: "Bob", email: "bob@example.com" },
+  { name: "Charlie", email: "charlie@example.com" },
+];
+
+const usersName = users.map((user) => user.name);
+
+console.log(usersName); // [ "Alice", "Bob", "Charlie"]
+```
+
+14. Filter method:
+
+The filter method creates a new array containing elements that pass a specified condition.
+It's useful for extracting specific data from an array.
+
+```js
+const users = [
+  { name: "Alice", age: 24 },
+  { name: "Bob", age: 26 },
+  { name: "Charlie", age: 18 },
+];
+
+const filterdUsers = users.filter((user) => user.age > 18);
+
+console.log(filterdUsers); // [ { name: 'Alice', age: 24 }, { name: 'Bob', age: 26 } ]
+```
+
+15. Find method:
+
+The find method returns the first element in an array that satisfies a specified condition.It's useful for searching for specific data.
+
+```js
+const users = [
+  { id: 1, name: "Alice" },
+  { id: 2, name: "Bob" },
+  { id: 3, name: "Charlie" },
+];
+
+const findUser = users.find((user) => user.id === 2);
+
+console.log(findUser); // { id: 2, name: 'Bob' }
+```
