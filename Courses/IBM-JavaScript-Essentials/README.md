@@ -773,3 +773,191 @@ fruits.unshift("orange", "strawberry");
 
 console.log(fruits); // ["orange", "strawberry", "apple", "banana"]
 ```
+
+5. Splice method:
+
+The splice changes the contents of an array by removing, replacing or adding elements at a specific position.
+
+Splice (1,1, "grape") replaces the element at index one which is banana with grape.
+
+```js
+const fruits = ["apple", "banana", "orange"];
+
+fruits.splice(1, 1, "grape"); // replace the second element with grape
+
+console.log(fruits); // ["apple", "grape", "orange"];
+```
+
+6. Concat method:
+
+The concat method combines them into a new array called combinedFruits. The slice method returns a shallow copy of a portion of an array into a new array without modifying the original content.
+
+```js
+const fruits = ["apple", "banana"];
+const fruits2 = ["orange", "strawberry"];
+
+const combileFruits = fruits.concat(fruits2);
+
+console.log(combileFruits); // ["apple", "banana", "orange", "strawberry"]
+```
+
+7. Slice method:
+
+The slice method returns a shallow copy of a portion of an array into a new array without modifying the original content.
+
+Slice (1, 3) creates a new array, slicedFruits containing elements from index 1-2, excluding index 3 of the original fruits array.
+
+```js
+const fruits = ["apple", "banana", "cherry", "orange"];
+
+const slicedFruits = fruits.slice(1, 3);
+
+console.log(slicedFruits); // ["banana", "cherry"]
+```
+
+8. IndexOf method:
+
+The indexOf method finds the index of a specified element within an array. It returns the index of the first occurrence of the element, or minus one, if it is not able to find the element.
+
+```js
+const fruits = ["apple", "banana", "cherry", "orange"];
+
+const index = fruits.indexOf("cherry"); // returns 2
+
+console.log(index);
+```
+
+9. Reverse method:
+
+The reverse method reverses the order of elements, effectively reversing the array in place.
+In this example, you can use the reverse method to reverse the order of elements in the fruit array.
+
+```js
+const fruits = ["apple", "banana", "cherry"];
+
+fruits.reverse();
+
+console.log(fruits); // [ "cherry", "banana", "apple"];
+```
+
+10. Sort method:
+
+The sort method is used to sort the elements of an array. By default, it sorts elements as strings and in lexicographic order, to sort numbers correctly, you can provide a comparison function.
+
+```js
+const numbers = [4, 2, 8, 6, 1];
+
+numbers.sort();
+
+console.log(numbers); // [1, 2, 4, 6, 8]
+```
+
+Sort method is used with a custom comparison function to sort the numbers correctly.
+
+```js
+const numbers = [4, 2, 8, 6, 1];
+
+numbers.sort((a, b) => a - b);
+
+console.log(numbers); // [1, 2, 4, 6, 8]
+```
+
+11. Length method:
+
+The length property returns the number of elements in the array.
+
+```js
+const fruits = ["apple", "banana", "cherry", "orange"];
+
+console.log(fruits); // 4
+```
+
+You can use it to determine the size, or to resize an array by changing its length.
+
+```js
+const fruits = ["apple", "banana", "cherry"];
+
+fruits.length = 5;
+
+// here javascript add 2 undefined to make the array size 5
+console.log(fruits); // ["apple", "banana", "cherry", undefined, undefined]
+```
+
+You can truncate an array by setting its length property to a smaller value. Reducing the length effectively removes elements from the end of the array.
+
+```js
+const fruits = ["apple", "banana", "cherry"];
+
+fruits.length = 2; // truncating the array
+
+console.log(fruits); // ["apple", "banana"]
+```
+
+12. ForEach method:
+
+The forEach method iterates through an array, and applies a provided function to each element.
+It's commonly used when you want to perform a specific action for each element, without creating a new array.
+
+```js
+const users = [
+  { name: "Alice", email: "alice@example.com" },
+  { name: "Bob", email: "bob@example.com" },
+  { name: "Charlie", email: "charlie@example.com" },
+];
+
+// this arrow function that takes the current user object as a parameter.
+users.forEach((user) => {
+  console.log(user.email);
+});
+```
+
+13. Map method:
+
+The map method creates a new array by applying a provided function to each element in the original array. It's perfect for transforming data without modifying the original array.
+
+The map method iterates through the array, and executes the provided arrow function for each element.
+
+```js
+const users = [
+  { name: "Alice", email: "alice@example.com" },
+  { name: "Bob", email: "bob@example.com" },
+  { name: "Charlie", email: "charlie@example.com" },
+];
+
+const usersName = users.map((user) => user.name);
+
+console.log(usersName); // [ "Alice", "Bob", "Charlie"]
+```
+
+14. Filter method:
+
+The filter method creates a new array containing elements that pass a specified condition.
+It's useful for extracting specific data from an array.
+
+```js
+const users = [
+  { name: "Alice", age: 24 },
+  { name: "Bob", age: 26 },
+  { name: "Charlie", age: 18 },
+];
+
+const filterdUsers = users.filter((user) => user.age > 18);
+
+console.log(filterdUsers); // [ { name: 'Alice', age: 24 }, { name: 'Bob', age: 26 } ]
+```
+
+15. Find method:
+
+The find method returns the first element in an array that satisfies a specified condition.It's useful for searching for specific data.
+
+```js
+const users = [
+  { id: 1, name: "Alice" },
+  { id: 2, name: "Bob" },
+  { id: 3, name: "Charlie" },
+];
+
+const findUser = users.find((user) => user.id === 2);
+
+console.log(findUser); // { id: 2, name: 'Bob' }
+```
