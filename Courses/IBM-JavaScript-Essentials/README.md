@@ -961,3 +961,48 @@ const findUser = users.find((user) => user.id === 2);
 
 console.log(findUser); // { id: 2, name: 'Bob' }
 ```
+
+- 2 Dimensional Array:
+
+A 2D array, also known as a two-dimensional array, is collection of elements organized in rows and columns. Each element in a 2D array is accessed using two indices, one for the row and another for the column.
+
+To access a specific element in a 2D array, you need to provide both row and column indices.
+
+```
+             [0][1][2] -> row
+ column ->[0][1, 2, 3],
+          [1][4, 5, 6],
+          [2][7, 8, 9],
+
+```
+
+```js
+const grid = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+
+// grid[column][row]
+console.log(grid[1][2]); // 6
+```
+
+- Iterating 2D Array:
+
+```js
+const grid = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+
+for (let i = 0; i < grid.length; i++) {
+  for (let j = 0; j < grid[i].length; j++) {
+    console.log(grid[i][j]);
+  }
+}
+```
+
+2D arrays are used in a wide range of applications, including representing game boards and grids, storing and processing images, managing data in spread-sheets and databases, solving mathematical problems such as matrix multiplication, and handling geographic data in maps and GIS systems.
+
+##
