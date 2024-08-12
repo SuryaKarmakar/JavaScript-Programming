@@ -1,0 +1,71 @@
+<html>
+  <body>
+    <div id="seating-chart" class="seating-chart">
+      <div class="seat available" onclick="bookSeat(0,0)">A1</div>
+      <div class="seat available" onclick="bookSeat(0,1)">A2</div>
+      <div class="seat available" onclick="bookSeat(0,2)">A3</div>
+      <div class="seat available" onclick="bookSeat(1,0)">B1</div>
+      <div class="seat available" onclick="bookSeat(1,1)">B2</div>
+      <div class="seat available" onclick="bookSeat(1,2)">B3</div>
+      <div class="seat available" onclick="bookSeat(2,0)">C1</div>
+      <div class="seat available" onclick="bookSeat(2,1)">C2</div>
+      <div class="seat available" onclick="bookSeat(2,2)">C3</div>
+    </div>
+
+    <style>
+      .seating-chart {
+        display: grid;
+        grid-template-columns: repeat(3, 70px);
+        gap: 10px;
+        justify-content: center;
+      }
+      .seat {
+        width: 70px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+      }
+      .booked {
+        background-color: #ff0000;
+        cursor: not-allowed;
+        color: white;
+      }
+      .available {
+        background-color: #7fff00;
+      }
+      .select-button {
+        width: 100%;
+        padding: 10px;
+        margin: 10px;
+        background-color: #007dff;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+    <script>
+      const seatsArray = [
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+      ];
+
+      function bookSeat(row, col) {
+        if (seatsArray[row][col] == 0) {
+          updateSeatStatus(row, col, "booked");
+          bookSeat[row][col] = 1;
+        } else {
+          alert("Seat is already booked");
+        }
+      }
+      function updateSeatStatus(row, col, status) {
+        const seats = document.getElementsByClassName("seat");
+        const index = row * 3 + col;
+        seats[index].classList.remove("available", "booked");
+        seats[index].classList.add(status);
+      }
+    </script>
+  </body>
+</html>
