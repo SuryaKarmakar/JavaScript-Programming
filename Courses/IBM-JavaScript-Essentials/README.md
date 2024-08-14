@@ -1271,4 +1271,64 @@ const lastName = "Deo";
 console.log(`${firstName} ${lastName}`); // John Deo
 ```
 
-##
+## Date Objects:
+
+The date object in Javascript is a crucial tool for working with date and time values. It offers methods for creating, formatting, and manipulating dates and times.
+
+```js
+const currentDate = new Date();
+const specifficDate = new Date(2024, 0, 1); // January 1, 2024
+```
+
+Date objects provide access to individual components of a date, such as year, month, day, hour, and more.
+
+```js
+const date = new Date();
+const year = date.getFullYear(); // Current year
+const month = date.getMonth(); // Current month (0-11)
+const day = date.getDate; // Day of the month (1-31)
+const hours = date.getHours(); // Hours (0-23)
+const minutes = date.getMinutes(); // Minutes (0-59)
+const seconds = date.getSeconds(); // Seconds (0-59)
+```
+
+You can format date objects into human readable strings using methods like toLocaleDateString and toLocaleTimeString.
+
+```js
+const date = new Date();
+const formattedDate = date.toLocaleDateString(); // E.g., "11/15/2023"
+const formattedTime = date.toLocaleTimeString(); // E.g., "1:30:45 PM"
+```
+
+## Timing Function:
+
+Timing functions are essential for controlling the flow of your Javascript code. They enable you to create delays, schedule repetitive tasks, and manage animations.
+
+- setTimeout function:
+
+The setTimeout function schedules the execution of a function after a specified delay in milliseconds.
+
+```js
+setTimeout(() => {
+  console.log("This message appears after a delay");
+}, 2000);
+```
+
+- setInterval function:
+
+setInterval is a built in Javascript function that schedules the repeated execution of a specified function at a specified time interval.
+
+The intervalID variable holds the ID returned by set interval, allowing you to later clear the interval using clearInterval() when needed.
+
+```js
+let count = 0;
+
+const intervalID = setInterval(() => {
+  console.log("Count: " + count);
+  count++;
+
+  if (count > 5) {
+    clearInterval(intervalID); // stop after 6 iterations
+  }
+}, 1000);
+```
