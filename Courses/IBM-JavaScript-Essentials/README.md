@@ -1146,3 +1146,189 @@ You can modify objects in the array by assigning new values to their properties.
 students[1].name = "Robert";
 students[2].age = 29;
 ```
+
+## String and String Manipulation:
+
+Strings are a fundamental data type in JavaScript used to represent text. They can contain letters, numbers, symbols, and white space characters. Strings are enclosed in single or double quotes.
+
+```
+const singleQuotes = 'single quotes';
+const doubleQuotes = "single quotes";
+```
+
+You can also use backticks template literals to create strings, allowing for string interpolation.
+
+```js
+const fullName = `${firstName} ${lastName}`;
+```
+
+You can concatenate strings using the + operator. The concatenation operator, +, in JavaScript is used to combine or join two or more strings together to create a single longer string.
+
+```js
+const firstName = "Peter";
+const greeting = "Hello, " + firstName + "!";
+
+console.log(greeting); // Hello, Peter!
+```
+
+- String length:
+
+To determine the length of a string, you can use the length property.
+
+```js
+const msg = "This is a message.";
+
+console.log(msg.length); // 18
+```
+
+- Accessing characters:
+
+You can access individual characters within a string using bracket notation and a zero-based index. In JavaScript, string indices are zero-based, meaning that the first character is at index zero and the second character is at index one, and so on.
+
+```js
+const text = "JavaScript";
+console.log(text[0]); // J
+```
+
+- Changing case:
+
+JavaScript provides methods to change the case of a string. toLowerCase method is a built in string method in JavaScript that converts all characters in a string to lowercase. and The toUpperCase method is another built in string method that converts all characters in a string to uppercase.
+
+```js
+const text = "Hello World";
+
+console.log(text.toLowerCase()); // hello world
+console.log(text.toUpperCase()); // HELLO WORLD
+```
+
+- String searching:
+
+You can search for substrings within a string using methods like indexOf, and includes.
+
+The includes method checks if the string is present within the sentence or not, if present then its return ture else return false.
+
+The indexOf method returns the index or position of the first occurrence.
+
+```js
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+console.log(sentence.includes("fox")); // true
+console.log(sentence.indexOf("fox")); // 16
+```
+
+The substring method extracts a portion of the text string starting from index 0 and ending before index 5
+
+The slice method extracts a portion of the text string starting from index 6 until the end.
+
+The substr method extracts a substring starting from index 6 and spanning 5 characters.
+
+```js
+const text = "Hello World";
+
+console.log(text.substring(0, 5)); // Hello
+console.log(text.slice(6)); // World
+console.log(text.substr(6, 5)); // World
+```
+
+- Replacing substrings:
+
+The replace method allows you to replace substrings with new values, allowing you to modify the string's content.
+
+```js
+const text = "Hello World";
+console.log(text.replace("World", "Universe")); // Hello Universe
+```
+
+- Splitting strings:
+
+You can split a string into an array of substrings using the split method. creating an array where each element represents the data for one person.
+
+```js
+const csvData =
+  "Alice, 25, New York; Bob, 30, Los Angeles; Charlie, 28, Chicago";
+
+console.log(csvData.split(";")); // [ 'Alice, 25, New York', ...]
+```
+
+- String trimming:
+
+The trim method removes leading and trailing white space from a string. t is especially useful for cleaning and formatting user input or working with data from external sources. The trim method is applied to text which removes leading and trailing white spaces such as spaces, tabs, and so on.
+
+```js
+const text = "     Trime me!   ";
+
+console.log(text.trim()); // Trime me!
+```
+
+- Template literals:
+
+Template literals provide a powerful and readable way to format strings. Template literals are enclosed by backticks and allow you to embed expressions within the string using dollar sign syntax.
+
+```js
+const firstName = "John";
+const lastName = "Deo";
+
+console.log(`${firstName} ${lastName}`); // John Deo
+```
+
+## Date Objects:
+
+The date object in Javascript is a crucial tool for working with date and time values. It offers methods for creating, formatting, and manipulating dates and times.
+
+```js
+const currentDate = new Date();
+const specifficDate = new Date(2024, 0, 1); // January 1, 2024
+```
+
+Date objects provide access to individual components of a date, such as year, month, day, hour, and more.
+
+```js
+const date = new Date();
+const year = date.getFullYear(); // Current year
+const month = date.getMonth(); // Current month (0-11)
+const day = date.getDate; // Day of the month (1-31)
+const hours = date.getHours(); // Hours (0-23)
+const minutes = date.getMinutes(); // Minutes (0-59)
+const seconds = date.getSeconds(); // Seconds (0-59)
+```
+
+You can format date objects into human readable strings using methods like toLocaleDateString and toLocaleTimeString.
+
+```js
+const date = new Date();
+const formattedDate = date.toLocaleDateString(); // E.g., "11/15/2023"
+const formattedTime = date.toLocaleTimeString(); // E.g., "1:30:45 PM"
+```
+
+## Timing Function:
+
+Timing functions are essential for controlling the flow of your Javascript code. They enable you to create delays, schedule repetitive tasks, and manage animations.
+
+- setTimeout function:
+
+The setTimeout function schedules the execution of a function after a specified delay in milliseconds.
+
+```js
+setTimeout(() => {
+  console.log("This message appears after a delay");
+}, 2000);
+```
+
+- setInterval function:
+
+setInterval is a built in Javascript function that schedules the repeated execution of a specified function at a specified time interval.
+
+The intervalID variable holds the ID returned by set interval, allowing you to later clear the interval using clearInterval() when needed.
+
+```js
+let count = 0;
+
+const intervalID = setInterval(() => {
+  console.log("Count: " + count);
+  count++;
+
+  if (count > 5) {
+    clearInterval(intervalID); // stop after 6 iterations
+  }
+}, 1000);
+```
