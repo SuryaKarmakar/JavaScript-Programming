@@ -1332,3 +1332,49 @@ const intervalID = setInterval(() => {
   }
 }, 1000);
 ```
+
+## Debugging in JavaScript:
+
+Debugging in JavaScript is the process of of identifying and fixing errors, bugs and issues in your JavaScript code. These errors can include syntax errors, logical errors, runtime errors, and other issues that prevent your JavaScript program from functioning as intended.
+
+1. the simplest form of debugging involves adding console.log statements to your code.
+
+2. You can insert the debugger statement directly into your code to halt execution and trigger the browser's debugger.
+
+3. Every major web browser includes developer tools that provide debugging capabilities. You can access these tools by pressing F12 or right-clicking on a web page and selecting inspect or inspect element.
+
+4. Try Catch block in JavaScript is a structured mechanism used for error handling. It allows you to manage and recover from runtime errors that might occur during the execution of your code.
+
+- Try Catch block:
+
+If an error occurs within the try-block, the catch block is executed. The catch block specifies how to handle the error. It takes an error object as a parameter which contains information about the error. Try-catch blocks allow you to isolate potential issues by wrapping specific code segments in try blocks you can focus on debugging those sections individually, making it easier to identify the root cause of errors.
+
+When an unhandled error occurs in JavaScript, it can lead to application crashes or abrupt behavior. Try-catch blocks prevent this by handling errors, allowing your application to continue running.
+
+The error object passed to the catch block contains valuable information such as the error type, message and stack trace.
+
+You can use the throw statement within a try block to throw custom expectations based on specific conditions. This enables you to provide more meaningful error information, aiding in debugging.
+
+```js
+const array = [1, 2, 3];
+
+// This code will throw an error because you cannot access properties of undefined. (reading 'name')
+console.log(array[5].name); // here code execution get stoped.
+
+// And this message will never be reached will not be logged.
+console.log("hello world");
+```
+
+```js
+try {
+  const array = [1, 2, 3];
+
+  // If an error occurs, it is caught by the catch block and we log an error message.
+  console.log(array[5].name); // here the script continues to execute after error handling.
+} catch (error) {
+  console.log(error);
+}
+
+// the message program continues after error handling is logged.
+console.log("hello world");
+```
