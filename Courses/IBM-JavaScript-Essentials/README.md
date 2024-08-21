@@ -1378,3 +1378,44 @@ try {
 // the message program continues after error handling is logged.
 console.log("hello world");
 ```
+
+## Document Object Model (DOM):
+
+The document object model, or DOM, is a programming interface for web documents. It represents the web page so that programs like JavaScript can change the document structure, content, and style. It provides a structured representation of the web page, making it easier for developers to interact with and manipulate web content.
+
+- Document:
+
+1. The term document refers to a web page or any XML document such as HTML, XHTML, or XML.
+2. The DOM represents this document as a structured tree-like hierarchy with each part represented as a node.
+
+- Object:
+
+1. An object represents a JavaScript object that corresponds to an element, attribute, or content within the web document.
+2. Each DOM element is an element of the web page, accessible and manipulable using JavaScript.
+
+- Model:
+
+1. The model denotes the structured and abstract representation of a web document.
+
+- How the DOM works ?
+
+When a web page is loaded in a browser, the browser creates a DOM representation of the page's structure. It forms a hierarchical tree structure with the document's root as the top node.
+
+- Types of node:
+
+1. Document node is the top level node representing the entire web page
+2. Element nodes represent HTML elements such as div, p, a, and form the bulk of the DOM structure.
+3. Attribute nodes represent attributes of HTML elements including id, class, and src.
+4. Text nodes contain the text content within elements.
+
+- $0 variable:
+
+$0 is a special variable that you can use in the browser's development console as a quick reference to the currently selected DOM element in the elements panel in web development.
+
+Open console tab within developer tools and type $0 in the console.
+
+```js
+$0;
+```
+
+For example, if you have selected a div element in the elements panel and you type $0 in the console, it will refer to that div element. Once you have the element referenced with $0, you can interact with it using JavaScript. This includes accessing its properties or modifying its attributes.
