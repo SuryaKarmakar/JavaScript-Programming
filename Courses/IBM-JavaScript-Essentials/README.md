@@ -1531,3 +1531,75 @@ Output:
 <p id="id-highlighted">This is highlighted paragraph with ID</p>
 <div>This a regular paragraph</div>
 ```
+
+- Manipulating:
+
+Manipulating elements using the DOM refers to changing the structure, content, attributes, or styles of HTML elements within a web page.
+
+1. Changing content:
+
+```html
+<body>
+  <p id="paragraph">This is some text</p>
+  <script>
+    const paragraph = document.getElementById("paragraph");
+    // paragraph.innerHTML = "This is updated text";
+    paragraph.textContent = "This is updated text";
+  </script>
+</body>
+```
+
+2. Changing attributes:
+
+You can also alter the attributes of each element, which can affect their behavior or appearance.
+
+```html
+<body>
+  <a id="my-link" href="https://www.google.com">Google</a>
+  <script>
+    const link = document.getElementById("my-link");
+    //  Changing href attribute using the setAttribute method
+    link.setAttribute("href", "https://www.facebook.com");
+  </script>
+</body>
+```
+
+3. Adding and Removing elements:
+
+You can dynamically add new elements to the page or remove existing ones based on user interactions or other conditions.
+
+```html
+<body>
+  <ul id="my-list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+  </ul>
+  <script>
+    const list = document.getElementById("my-list");
+    // creates a new list item using createElement method
+    const newItem = document.createElement("li");
+    newItem.textContent = "Item 3";
+
+    // appends it to the list using the appendChild method
+    list.appendChild(newItem);
+  </script>
+</body>
+```
+
+4. Reordering elements:
+
+You can change the order of elements within a parent container, which affects their display order on the page.
+
+```html
+<body>
+  <div id="my-container">
+    <p>First paragrapg</p>
+    <p>Second paragrapg</p>
+  </div>
+  <script>
+    const container = document.getElementById("my-container");
+    const secondParagraph = document.querySelector("p:nth-child(2)");
+    container.insertBefore(secondParagraph, container.querySelector("p"));
+  </script>
+</body>
+```
