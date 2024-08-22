@@ -1422,3 +1422,112 @@ documentNode; // You will be able to see the entire document object.
 3. Attribute nodes represent attributes of HTML elements including id, class, and src.
 
 4. Text nodes contain the text content within elements. To retrieve the text of the selected element, use the $0.textContent command. This will give the text content.
+
+## Accessing and Manipulating DOM Elements:
+
+- Accessing:
+
+Accessing the DOM means obtaining references to specific HTML elements on a web page.Once you access a part, you can perform actions like reading content, modifying attributes, or adding event listeners.
+
+1. getElementById:
+
+getElementById is a method in JavaScript used to access a specific HTML element within the DOM based on its unique ID attribute.
+
+```html
+<body>
+  <h1 id="heading">Welcome to DOM manipulation</h1>
+  <script>
+    const headingElement = document.getElementById("heading");
+    console.log(headingElement);
+    // headingElement.innerHTML = "Hello World!";
+  </script>
+</body>
+```
+
+```
+Output:
+
+<h1 id="heading">Welcome to DOM manipulation</h1>
+```
+
+2. getElementsByClassName:
+
+You can use the getElementsByClassName method in JavaScript to access multiple HTML elements within the DOM that share the same class name.
+
+```html
+<body>
+  <p class="highlighted">This is a highlighted paragraph</p>
+  <p class="highlighted">This is another highlighted paragraph</p>
+  <script>
+    // The result is a collection of elements stored in the variable highlightedElements.
+    const highlightedElements = document.getElementsByClassName("highlighted");
+    for (let i = 0; i < highlightedElements.length; i++) {
+      // highlightedElements[i].textContent = "New highlighted paragraph";
+      console.log(highlightedElements[i]);
+    }
+  </script>
+</body>
+```
+
+```
+Output:
+
+<p class="highlighted">This is a highlighted paragraph</p>
+<p class="highlighted">This is another highlighted paragraph</p>
+```
+
+3.  getElementsByTagName:
+
+You can use the getElementsByTagName method in JavaScript to access multiple HTML elements within the DOM based on their tag name.
+
+```html
+<body>
+  <h1>Heading</h1>
+  <p>This is a paragraph</p>
+  <p>This is another paragraph</p>
+  <script>
+    // The result is a collection of elements stored in the variable paragraphElements.
+    const paragraphElements = document.getElementsByTagName("p");
+    for (let i = 0; i < paragraphElements.length; i++) {
+      console.log(paragraphElements[i]);
+    }
+  </script>
+</body>
+```
+
+```
+Output:
+
+<p>This is a paragraph</p>
+<p>This is another paragraph</p>
+```
+
+4. querySelector:
+
+querySelector is a versatile method in JavaScript used to access HTML elements within the DOM based on CSS-like selectors.
+
+```html
+<body>
+  <p class="highlighted">This is a highlighted paragraph</p>
+  <p id="id-highlighted">This is highlighted paragraph with ID</p>
+  <div>This a regular paragraph</div>
+  <script>
+    const elementByClass = document.querySelector(".highlighted");
+    console.log(elementByClass);
+
+    const elementById = document.querySelector("#id-highlighted");
+    console.log(elementById);
+
+    const elementByTag = document.querySelector("div");
+    console.log(elementByTag);
+  </script>
+</body>
+```
+
+```
+Output:
+
+<p class="highlighted">This is a highlighted paragraph</p>
+<p id="id-highlighted">This is highlighted paragraph with ID</p>
+<div>This a regular paragraph</div>
+```
