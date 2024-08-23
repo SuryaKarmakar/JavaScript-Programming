@@ -1383,6 +1383,16 @@ console.log("hello world");
 
 The document object model, or DOM, is a programming interface for web documents. It represents the web page so that programs like JavaScript can change the document structure, content, and style. It provides a structured representation of the web page, making it easier for developers to interact with and manipulate web content.
 
+1. The DOM allows developers to swiftly respond to user actions in real time with JavaScript. Developers leverage the DOM to access and modify page content and structure.
+
+2. The DOM bridges browser differences, ensuring consistent functionality across various platforms and simplifying cross-browser compatibility.
+
+3. The DOM facilitates real-time content updates without requiring a full page refresh.
+
+4. The DOM allows developers to attach event listeners to the elements, enabling them to respond to user interactions.
+
+5. The DOM supports assistive technologies like screen readers and ensures inclusivity for users with disabilities. Dynamic and interactive features facilitated by the DOM, contribute to an improved user experience.
+
 - Document:
 
 1. The term document refers to a web page or any XML document such as HTML, XHTML, or XML.
@@ -1419,7 +1429,17 @@ documentNode; // You will be able to see the entire document object.
 
 2. Element nodes represent HTML elements such as div, p, a, and form the bulk of the DOM structure. To access the element node select the paragraph you want to inspect and select inspect. then navigate to the console tab and enter $0. It will output the HTML code and details of that specific element.
 
-3. Attribute nodes represent attributes of HTML elements including id, class, and src.
+3. Attribute nodes represent attributes of HTML elements including id, class etc and provide additional information about an element. To access the attributes, select the anchor tag you want to inspect and select inspect then navigate to the console tab and enter $0 getAttribute("href"); command. this will give you the link inside href.
+
+```js
+$0 getAttribute("href") // https://www.example.com
+```
+
+You can also change the values of the attributes or modify them using this command.
+
+```js
+$0.getAttribute("href", "https://www.updated.com");
+```
 
 4. Text nodes contain the text content within elements. To retrieve the text of the selected element, use the $0.textContent command. This will give the text content.
 
