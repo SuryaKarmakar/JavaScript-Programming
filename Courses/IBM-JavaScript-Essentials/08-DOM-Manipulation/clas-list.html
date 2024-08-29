@@ -26,15 +26,16 @@
 
     <script>
       function performClassListOperations() {
+        // Getting the Paragraph Element
         const paragraph = document.getElementById("myParagraph");
 
-        // Adding a class
+        // Adds the class "italic" to the paragraph element's class list.
         paragraph.classList.add("italic");
 
-        // Removing a class
+        // Removes the class "highlight" from the paragraph element's class list.
         paragraph.classList.remove("highlight");
 
-        // Toggling a class
+        // Toggles the class "underline" on the paragraph element. In this case, it explicitly adds the class "underline" because the second parameter is true.
         paragraph.classList.toggle("underline", true);
 
         // Checking if a class exists
