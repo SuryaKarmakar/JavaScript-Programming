@@ -1797,3 +1797,63 @@ Finding elements within a container involves searching for and accessing HTML el
   </body>
 </html>
 ```
+
+- Styling DOM Elements:
+
+1. style property - You can directly access and modify the inline styles of an HTML element using the style property. This method is beneficial for dynamically adjusting the appearance of elements based on user interactions or events.
+
+```html
+<html>
+  <body>
+    <button id="myBtn" onclick="updateStyle()">Click Me</button>
+    <button id="myBtn1">Click Me 2</button>
+    <script>
+      const button = document.getElementById("myBtn1");
+      const button1 = document.getElementById("myBtn1");
+
+      function updateStyle() {
+        button.style.backgroundColor = "blue";
+        button.style.color = "white";
+        button.style.fontSize = "16px";
+      }
+    </script>
+  </body>
+</html>
+```
+
+2. classList property - The class list property facilitates adding, removing, or toggling CSS classes on an element. This property is especially useful for applying predefined styles from CSS classes and enables the toggling of classes in response to user interactions.
+
+```
+element.classList.add(className)
+element.classList.remove(className)
+element.classList.toggle(className)
+element.classList.contains(className)
+```
+
+3. setAttribute - The setAttribute method allows you to set or modify the style attribute of an element using a string containing inline CSS.While effective, the set attribute process replaces the entire style attribute of an element.
+
+```html
+<html>
+  <body>
+    <p id="myText" style="color: red">This is a red text</p>
+    <script>
+      const text = document.getElementById("myText");
+      text.setAttribute("style", "color: blue; font-size: 20px;");
+    </script>
+  </body>
+</html>
+```
+
+4. remove property - the remove property method is useful for selectively removing specific CSS properties from an element's inline style, this method provides a way to reset or adjust styling on a granular level.
+
+```html
+<html>
+  <body>
+    <p id="myText" style="color: red; font-size: 30px;">This is a red text</p>
+    <script>
+      const text = document.getElementById("myText");
+      text.style.removeProperty("font-size");
+    </script>
+  </body>
+</html>
+```
