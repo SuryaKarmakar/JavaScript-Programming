@@ -61,10 +61,14 @@ function shuffle(array) {
 
 // The handleCardClick(event) function manages the logic when a user clicks the card in the memory match game. Include given code after shuffle() function. Let's break down each step within this function:
 function handleCardClick(event) {
+  // retrieves the element that triggered the event
   const card = event.target;
   if (!card.classList.contains("card") || card.classList.contains("matched")) {
+    // If the element is not a card or has already matched, the function returns early, ignoring any further actions for this particular click.
     return;
   }
+
+  // This action reveals the card's color by changing the text content to the color value.
   card.textContent = card.dataset.color;
   card.style.backgroundColor = card.dataset.color;
   selectedCards.push(card);
@@ -73,24 +77,34 @@ function handleCardClick(event) {
   }
 }
 
+// The checkMatch() function evaluates whether the two selected cards match each other in the memory match game. Include given code after handleCardClick() function.
 function checkMatch() {
+  // This line uses array destructuring to assign the first two elements of the 'selectedCards' array to 'card1' and 'card2'. These variables represent the two cards selected by the player for comparison.
   const [card1, card2] = selectedCards;
+
+  // checking 'card1' matches the color value of 'card2'
   if (card1.dataset.color === card2.dataset.color) {
+    // marking them as matched pairs in the game.
     card1.classList.add("matched");
     card2.classList.add("matched");
     score += 2;
     scoreElement.textContent = `Score: ${score}`;
   } else {
+    // it resets the text content of both cards to a question mark ('?'), hiding their colors again.
     card1.textContent = "?";
     card2.textContent = "?";
     card1.style.backgroundColor = "#ddd";
     card2.style.backgroundColor = "#ddd";
   }
+  // This action ensures the player can select two new cards after the comparison.
   selectedCards = [];
 }
 
+// The startGame() Function is a pivotal part of initializing and starting the memory match game. Include given code after checkMatch() function.
 function startGame() {
   let timeLeft = 30;
+
+  // prevent multiple game initiations simultaneously, ensuring one game is in progress at a time.
   startbtn.disabled = true;
   score = 0; // Reset score to zero
   scoreElement.textContent = `Score: ${score}`;
@@ -102,6 +116,7 @@ function startGame() {
   gameContainer.addEventListener("click", handleCardClick);
 }
 
+// The startGameTimer(timeLeft) function manages the game timer, updating the displayed time and handling the end of the game when the timer reaches zero. Include after startGame() Function.
 function startGameTimer(timeLeft) {
   timerElement.textContent = `Time Left: ${timeLeft}`;
   gameInterval = setInterval(() => {
