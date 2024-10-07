@@ -1857,3 +1857,52 @@ element.classList.contains(className)
   </body>
 </html>
 ```
+
+## JSON:
+
+JSON, or JavaScript object notation is a lightweight data interchange format that is easy for humans to read and write and easy for machines to parse and generate. It is a text-based format used for structuring data in a way that is both human readable and machine readable.
+
+1. It uses a simple syntax with key value pairs and arrays, making it accessible to developers and non developers alike.
+
+2. JSON is widely used for exchanging data between a server and a web application or between different parts of a software system.
+
+3. JSON is equally easy for machines to parse, making it a popular choice for data serialization and deserialization. This means that software applications can easily convert JSON data into the internal data structures of the programming language and vice versa.
+
+4. JSON is not tied to any specific programming language, which means it can be used in a wide range of programming environments.
+
+- JSON vs Object:
+
+1.  JSON is a text based data interchange format. It represents data as a string.
+
+    Whereas an object is a fundamental data structure that can hold data and methods to manipulate that data.
+
+2.  JSON is a way to serialize and transmit data, primarily used for data exchange between systems or for storing data and files.
+
+    Objects are typically used to model real world entities or abstract concepts within a software application.
+
+3.  JSON has a specific syntax and rules that must be followed. It uses key value pairs and is limited to a specific set of data
+    types including strings, numbers, Booleans, arrays and other JSON objects.
+
+    In programming, objects are not restricted to a specific syntax or set of data types. They are a part of the programming language and can include a wide variety of data types, such as integers, floats, custom data structures, and more.
+
+4.  JSON is primarily used for data interchange. It is used to transmit data between a client and a server, between different parts of  
+    software system or to store configuration data in files.
+
+    While objects in programming are used to model and manipulate data within the application itself.
+
+```Json
+{
+  "name": "Surya Karmakar",
+  "age": 24
+}
+```
+
+```js
+const person = {
+  name: "Surya Karmakar",
+  age: 24,
+  sayHello: function () {
+    console.log("Hello, my name is " + this.name);
+  },
+};
+```
