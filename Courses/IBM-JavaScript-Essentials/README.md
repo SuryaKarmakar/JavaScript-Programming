@@ -1906,3 +1906,92 @@ const person = {
   },
 };
 ```
+
+## Async and Sync:
+
+- Synchronous programming:
+
+Synchronous programming in JavaScript refers to the execution of code in a sequential and blocking manner. In a synchronous program, each operation or task is executed one after the other, and the program waits for each task to complete before moving on to the next one. This means that if one operation takes a long time to execute, it can block the entire program's execution, making it unresponsive.
+
+```js
+function one() {
+  console.log("hello one");
+}
+function two() {
+  console.log("hello two");
+}
+function three() {
+  console.log("hello three");
+}
+
+console.log("start of the program");
+one();
+two();
+three();
+console.log("end of the program");
+```
+
+```
+Output:
+
+start of the program
+hello one
+hello two
+hello three
+end of the program
+```
+
+- Asynchronous programming:
+
+Asynchronous programming in JavaScript is a programming paradigm that allows you to execute code without blocking the main execution thread.
+It enables tasks to run concurrently, making it particularly useful for handling operations that may take some time to complete, such as network requests, file I/O, or user interactions.
+
+1. Callbacks are functions that are passed as arguments to other functions and are executed at a later time, typically when an asynchronous operation completes. They allow you to specify what should happen after the asynchronous task is done.
+
+2. Promises are objects that represent the eventual completion or failure of an asynchronous operation. They provide a cleaner and more structured way to work with asynchronous code compared to callbacks.
+
+3. async/await is a more recent way to work with asynchronous operations. It allows you to write asynchronous code in a more synchronous-looking style, making it easier to read and maintain.
+
+4. JavaScript uses an event loop to manage asynchronous operations. The event loop continuously checks the message queue for tasks that need to be executed, and runs them in the order they were added.
+
+```js
+console.log("Start");
+setTimeout(function () {
+  console.log("Delayed message");
+}, 2000);
+console.log("End");
+```
+
+```
+Output:
+
+Start
+End
+Delayed message
+```
+
+- Asynchronous programming using callback:
+
+```js
+function asyncOperation(callback) {
+  setTimeout(function () {
+    callback("Data from a asynchronous operation");
+  }, 2000);
+}
+
+console.log("Start of the program");
+asyncOperation(function (data) {
+  console.log(data);
+  console.log("End of the asynchronous operation");
+});
+console.log("End of the program");
+```
+
+```
+Output:
+
+Start of the program
+End of the program
+Data from a asynchronous operation
+End of the asynchronous operation
+```
