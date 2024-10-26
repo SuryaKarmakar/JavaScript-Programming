@@ -1906,3 +1906,141 @@ const person = {
   },
 };
 ```
+
+## Async and Sync:
+
+- Synchronous programming:
+
+Synchronous programming in JavaScript refers to the execution of code in a sequential and blocking manner. In a synchronous program, each operation or task is executed one after the other, and the program waits for each task to complete before moving on to the next one. This means that if one operation takes a long time to execute, it can block the entire program's execution, making it unresponsive.
+
+```js
+function one() {
+  console.log("hello one");
+}
+function two() {
+  console.log("hello two");
+}
+function three() {
+  console.log("hello three");
+}
+
+console.log("start of the program");
+one();
+two();
+three();
+console.log("end of the program");
+```
+
+```
+Output:
+
+start of the program
+hello one
+hello two
+hello three
+end of the program
+```
+
+- Asynchronous programming:
+
+Asynchronous programming in JavaScript is a programming paradigm that allows you to execute code without blocking the main execution thread.
+It enables tasks to run concurrently, making it particularly useful for handling operations that may take some time to complete, such as network requests, file I/O, or user interactions.
+
+1. Callbacks are functions that are passed as arguments to other functions and are executed at a later time, typically when an asynchronous operation completes. They allow you to specify what should happen after the asynchronous task is done.
+
+2. Promises are objects that represent the eventual completion or failure of an asynchronous operation. They provide a cleaner and more structured way to work with asynchronous code compared to callbacks.
+
+3. async/await is a more recent way to work with asynchronous operations. It allows you to write asynchronous code in a more synchronous-looking style, making it easier to read and maintain.
+
+4. JavaScript uses an event loop to manage asynchronous operations. The event loop continuously checks the message queue for tasks that need to be executed, and runs them in the order they were added.
+
+```js
+console.log("Start");
+setTimeout(function () {
+  console.log("Delayed message");
+}, 2000);
+console.log("End");
+```
+
+```
+Output:
+
+Start
+End
+Delayed message
+```
+
+- Asynchronous programming using callback:
+
+```js
+function asyncOperation(callback) {
+  setTimeout(function () {
+    callback("Data from a asynchronous operation");
+  }, 2000);
+}
+
+console.log("Start of the program");
+asyncOperation(function (data) {
+  console.log(data);
+  console.log("End of the asynchronous operation");
+});
+console.log("End of the program");
+```
+
+```
+Output:
+
+Start of the program
+End of the program
+Data from a asynchronous operation
+End of the asynchronous operation
+```
+
+## AJAX (Asynchronous JavaScript and XML):
+
+AJAX, short for asynchronous JavaScript and XML, is a set of web development techniques used to create dynamic and responsive web applications. It enables asynchronous communication between the web browser and the server, allowing data to be exchanged without requiring a full page reload.
+
+AJAX operates asynchronously, meaning it allows the webpage to send and receive data from the server in the background while the user interacts with the page.
+
+- Advantages of using AJAX:
+
+1. AJAX facilitates smooth and dynamic content updates, leading to a more interactive user interface.
+
+2. By updating only specific portions of the page, AJAX reduces bandwidth usage and server load, enhancing performance.
+
+3. Users can continue interacting with the webpage while data is being fetched or processed in the background.
+
+4. The seamless experience of infinite scrolling, live updates, and comments that load without page refreshes is made possible through AJAX, enhancing the user experience.
+
+## XMLHttpRequest (XHR):
+
+XMLHttpRequest (XHR) is a JavaScript API that enables communication between a web browser and a server. It allows for making HTTP requests
+to retrieve data from a server or send data to a server in the background without reloading the entire web page. XMLHttpRequest is at the core of AJAX, asynchronous JavaScript and XML, a technique for creating more responsive and dynamic web applications.
+
+- Features and Functionalities of XMLHttpRequest:
+
+1. You can use XMLHttpRequest to fetch data from external APIs or servers managing different data formats such as JSON or XML.
+
+2. With XHR, you can utilize event listeners to handle responses, including response codes like success or failure.
+
+3. You can effectively manage errors and timeouts with XMLHttpRequest.
+
+4. You can use XMLHttpRequest to retrieve data securely, addressing concerns such as cross-origin request.
+
+To initiate an HTTP request, developers create an instance of the XMLHttpRequest object. This object exposes various properties and methods that facilitate configuring and sending requests, handling responses, and managing errors.
+
+```js
+var xhr = new XMLHttpRequest();
+```
+
+Next, the open method sets up the request specifying the HTTP method get and the URL.
+
+```js
+xhr.open("GET", "https://jsonplaceholder.typicode.com/todos", true);
+```
+
+After configuring the request, you can invoke the send method to send the request to the specified URL.
+
+```js
+xhr.send();
+```
