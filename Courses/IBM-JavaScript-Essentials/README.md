@@ -1995,3 +1995,52 @@ End of the program
 Data from a asynchronous operation
 End of the asynchronous operation
 ```
+
+## AJAX (Asynchronous JavaScript and XML):
+
+AJAX, short for asynchronous JavaScript and XML, is a set of web development techniques used to create dynamic and responsive web applications. It enables asynchronous communication between the web browser and the server, allowing data to be exchanged without requiring a full page reload.
+
+AJAX operates asynchronously, meaning it allows the webpage to send and receive data from the server in the background while the user interacts with the page.
+
+- Advantages of using AJAX:
+
+1. AJAX facilitates smooth and dynamic content updates, leading to a more interactive user interface.
+
+2. By updating only specific portions of the page, AJAX reduces bandwidth usage and server load, enhancing performance.
+
+3. Users can continue interacting with the webpage while data is being fetched or processed in the background.
+
+4. The seamless experience of infinite scrolling, live updates, and comments that load without page refreshes is made possible through AJAX, enhancing the user experience.
+
+## XMLHttpRequest (XHR):
+
+XMLHttpRequest (XHR) is a JavaScript API that enables communication between a web browser and a server. It allows for making HTTP requests
+to retrieve data from a server or send data to a server in the background without reloading the entire web page. XMLHttpRequest is at the core of AJAX, asynchronous JavaScript and XML, a technique for creating more responsive and dynamic web applications.
+
+- Features and Functionalities of XMLHttpRequest:
+
+1. You can use XMLHttpRequest to fetch data from external APIs or servers managing different data formats such as JSON or XML.
+
+2. With XHR, you can utilize event listeners to handle responses, including response codes like success or failure.
+
+3. You can effectively manage errors and timeouts with XMLHttpRequest.
+
+4. You can use XMLHttpRequest to retrieve data securely, addressing concerns such as cross-origin request.
+
+To initiate an HTTP request, developers create an instance of the XMLHttpRequest object. This object exposes various properties and methods that facilitate configuring and sending requests, handling responses, and managing errors.
+
+```js
+var xhr = new XMLHttpRequest();
+```
+
+Next, the open method sets up the request specifying the HTTP method get and the URL.
+
+```js
+xhr.open("GET", "https://jsonplaceholder.typicode.com/todos", true);
+```
+
+After configuring the request, you can invoke the send method to send the request to the specified URL.
+
+```js
+xhr.send();
+```
